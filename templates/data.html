@@ -1,0 +1,130 @@
+
+
+
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+
+    <script>
+        function getParticleValues() {
+
+            $.getJSON('http://blynk-cloud.com/dHeSr2A_yh9uwwfzz8rlHhcgB1GcTygy/project', function (data) {
+
+
+                console.log(data);
+
+                console.log("LABEL: " + data.widgets[0].label + "   VALUE: " + data.widgets[0].value)
+
+                console.log("LABEL: " + data.widgets[1].label + "   VALUE: " + data.widgets[1].value)
+
+                console.log("LABEL: " + data.widgets[2].label + "   VALUE: " + data.widgets[2].value)
+
+                console.log("LABEL: " + data.widgets[3].label + "   VALUE: " + data.widgets[3].value)
+
+
+            });
+        }
+
+
+        // $(document).ready(function () {
+        //     console.log("ready!");
+        //     $('#load').hide();
+        //     window.setInterval(function () {
+        //         getParticleValues();
+        //     }, 2000);
+        // }
+
+    </script>
+
+
+
+
+    <style>
+        body {
+            background-color: lightblue;
+            background-image: url('farmer.jpg');
+            background-size: cover;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-size: 30px;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        p:hover {
+            background-color: #111;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 90px;
+            background-color: black;
+        }
+
+        p {
+            font-family: verdana;
+            font-size: 35px;
+            text-align: center;
+            color: white;
+        }
+
+        #rcorners3 {
+            border-radius: 25px;
+            background: #111;
+            border: 2px solid #73AD21;
+            background-position: left top;
+            background-repeat: repeat;
+            padding: 20px;
+            width: 250px;
+            height: 40px;
+        }
+
+        .data {
+            color: white;
+            font-size: 80px;
+        }
+    </style>
+
+
+
+</head>
+
+
+
+<body onload="getParticleValues()">
+    <h1>Farmer's Portal</h1>
+
+    <div class="data" id="results">
+        <div class="data" id="temp"></div>
+        <div class="data" id="humidity"></div>
+        <div class="data" id="uv"></div>
+        <div class="data" id="moisture"></div>
+    </div>
+
+</body>
+
+</html>
