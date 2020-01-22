@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Data</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel='stylesheet' href="css/style.css">
+    <script>var endpoint= '{{ ENDPOINT }}' ;</script>
+    <script src='js/script.js'></script>
+</head>
+
+
+<body translate="no">
+
+    <!-- <div id="bg">
+        <img src="assets/image2.jpg" alt="">
+      </div> -->
+
+
+
+    <div class="bg-style">
+        </br></br>
+
+        <h1 class="p-3">REAL-TIME SENSOR DATA</h1>
+
+        </br></br></br></br></br></br>
+
+        <div class="wrapper">
+            <div class="row pt-5 pb-5">
+
+                <div class="col-6 col-sm-3">
+                    <div class="counter" data-cp-percentage="70" data-cp-color="#fff" style="height: 265px;"><span
+                            class="percentage">70 </span>
+                        <canvas class="circleProgressCanvas" width="530" height="530"
+                            style="height: 265px; width: 265px;"></canvas>
+                    </div>
+                    <h4>HUMIDITY</h4>
+                </div>
+
+                <div class="col-6 col-sm-3">
+                    <div class="counter" data-cp-percentage="93" data-cp-color="#fff" style="height: 265px;">
+                        <span class="percentage">93 </span>
+                        <canvas class="circleProgressCanvas" width="530" height="530"
+                            style="height: 265px; width: 265px;"></canvas>
+                    </div>
+                    <h4>TEMPERATURE</h4>
+                </div>
+
+                <div class="col-6 col-sm-3">
+                    <div class="counter" data-cp-percentage="25" data-cp-color="#fff" style="height: 265px;"><span
+                            class="percentage">25 </span><canvas class="circleProgressCanvas" width="530" height="530"
+                            style="height: 265px; width: 265px;"></canvas></div>
+                    <h4>UV-INDEX</h4>
+                </div>
+
+                <div class="col-6 col-sm-3">
+                    <div class="counter" data-cp-percentage="24" data-cp-color="#fff" style="height: 265px;"><span
+                            class="percentage">24 </span><canvas class="circleProgressCanvas" width="530" height="530"
+                            style="height: 265px; width: 265px;"></canvas></div>
+                    <h4>MOISTURE</h4>
+                </div>
+
+            </div>
+        </div>
+
+        </br></br></br></br></br>
+
+        <button type="button" class="btn" style="background-color: #273746; color: #fff;">Refresh</button>
+
+    </div>
+
+
+</body>
+
+</html>
